@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Summary</title>
+    <style>
+        body {
+            font-family: 'DejaVu Sans', sans-serif;
+            margin: 40px;
+        }
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+        }
+        .main {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">Business Summary Report</div>
+
+        <div class="subtitle">1. Event Rental Business</div>
+        <table class="table">
+            <tr>
+                <th>Year</th>
+                <th>Revenue</th>
+                <th>Profit</th>
+                <th>Cumulative Profit</th>
+                <th>Equipment Value</th>
+            </tr>
+            {{range .eventRental.yearlyData}}
+            <tr>
+                <td>{{.year}}</td>
+                <td>{{.revenue}}</td>
+                <td>{{.profit}}</td>
+                <td>{{.cumulativeProfit}}</td>
+                <td>{{.equipmentValue}}</td>
+            </tr>
+            {{end}}
+        </table>
+        <div class="content">Total Value of Event Rental Business: {{.eventRental.totalValue}}</div>
+
+        <div class="subtitle">2. Real Estate Business</div>
+        <table class="table">
+            <tr>
+                <th>Year</th>
+                <th>Revenue from Rent</th>
+                <th>Profit</th>
+                <th>Cumulative Profit</th>
+                <th>Additional Property Value</th>
+                <th>Property Value</th>
+            </tr>
+            {{range .realEstate.yearlyData}}
+            <tr>
+                <td>{{.year}}</td>
+                <td>{{.revenueFromRent}}</td>
+                <td>{{.profit}}</td>
+                <td>{{.cumulativeProfit}}</td>
+                <td>{{.additionalPropertyValue}}</td>
+                <td>{{.propertyValue}}</td>
+            </tr>
+            {{end}}
+        </table>
+        <div class="content">Total Value of Real Estate Business: {{.realEstate.totalValue}}</div>
+
+        <div class="subtitle">3. School Business</div>
+        <table class="table">
+            <tr>
+                <th>Year</th>
+                <th>Day Students</th>
+                <th>Boarding Students</th>
+                <th>Revenue per Term</th>
+                <th>Annual Revenue</th>
+                <th>Profit</th>
+                <th>Cumulative Profit</th>
+            </tr>
+            {{range .schoolBusiness.yearlyData}}
+            <tr>
+                <td>{{.year}}</td>
+                <td>{{.dayStudents}}</td>
+                <td>{{.boardingStudents}}</td>
+                <td>{{.revenuePerTerm}}</td>
+                <td>{{.annualRevenue}}</td>
+                <td>{{.profit}}</td>
+                <td>{{.cumulativeProfit}}</td>
+            </tr>
+            {{end}}
+        </table>
+        <div class="content">Total Value of School Business: {{.schoolBusiness.totalValue}}</div>
+
+        <div class="subtitle">Total Net Worth at End of Year 5</div>
+        <div class="content">Event Rental Business: {{.eventRental.totalValue}}</div>
+        <div class="content">Real Estate Business: {{.realEstate.totalValue}}</div>
+        <div class="content">School Business: {{.schoolBusiness.totalValue}}</div>
+        <div class="content">Total Net Worth: {{.totalNetWorth}}</div>
+    </div>
+</body>
+</html>

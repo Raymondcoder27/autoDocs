@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom styles for navigation links */
+.nav-link {
+    @apply text-gray-700 hover:text-blue-500 font-semibold block p-2;
+  }
+  
+  .router-link-active {
+    @apply text-blue-500 font-bold;
+  }

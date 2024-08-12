@@ -1,0 +1,79 @@
+{
+    "realEstate": {
+        "yearlyData": [
+            {
+                "year": 2021,
+                "revenueFromRent": 120000,
+                "profit": 30000,
+                "cumulativeProfit": 30000,
+                "additionalPropertyValue": 50000,
+                "propertyValue": 200000
+            },
+            {
+                "year": 2022,
+                "revenueFromRent": 130000,
+                "profit": 32000,
+                "cumulativeProfit": 62000,
+                "additionalPropertyValue": 60000,
+                "propertyValue": 220000
+            },
+            {
+                "year": 2023,
+                "revenueFromRent": 140000,
+                "profit": 34000,
+                "cumulativeProfit": 96000,
+                "additionalPropertyValue": 70000,
+                "propertyValue": 240000
+            },
+            {
+                "year": 2024,
+                "revenueFromRent": 150000,
+                "profit": 36000,
+                "cumulativeProfit": 132000,
+                "additionalPropertyValue": 80000,
+                "propertyValue": 260000
+            },
+            {
+                "year": 2025,
+                "revenueFromRent": 160000,
+                "profit": 38000,
+                "cumulativeProfit": 170000,
+                "additionalPropertyValue": 90000,
+                "propertyValue": 280000
+            }
+        ],
+        "totalValue": 280000,
+        "properties": [
+            {
+                "propertyID": "P001",
+                "address": "123 Elm Street",
+                "manager": "John Doe",
+                "value": 60000
+            },
+            {
+                "propertyID": "P002",
+                "address": "456 Maple Avenue",
+                "manager": "Jane Smith",
+                "value": 58000
+            },
+            {
+                "propertyID": "P003",
+                "address": "789 Oak Lane",
+                "manager": "Emily Johnson",
+                "value": 59000
+            },
+            {
+                "propertyID": "P004",
+                "address": "101 Pine Road",
+                "manager": "Michael Brown",
+                "value": 57000
+            },
+            {
+                "propertyID": "P005",
+                "address": "202 Birch Boulevard",
+                "manager": "Sarah Davis",
+                "value": 54000
+            }
+        ]
+    }
+}
